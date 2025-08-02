@@ -1,0 +1,31 @@
+[package]
+name = "rs-pg-maintenance-analyze"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.sqlx]
+version = "0.8"
+default-features = false
+features = [
+	"macros",
+	"postgres",
+	"runtime-tokio",
+]
+
+[dependencies.async-trait]
+version = "0.1"
+default-features = false
+features = [
+]
+
+[dependencies.async-graphql]
+version = "7.0"
+default-features = false
+features = [
+]

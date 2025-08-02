@@ -1,0 +1,23 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "(\n                SELECT table_name\n                FROM information_schema.tables\n                WHERE\n                    table_schema = $1::TEXT\n                    AND table_name LIKE $2::TEXT\n            )",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "table_name",
+        "type_info": "Name"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      true
+    ]
+  },
+  "hash": "78b1ed090134d5de0ee6de1ea459e04b147b12c835a82e173040cfc9a0ced772"
+}
